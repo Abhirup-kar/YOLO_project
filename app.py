@@ -85,6 +85,12 @@ def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
 # ===================================================
 webrtc_streamer(
     key="intruder-detection", 
-    video_frame_callback=video_frame_callback, # We pass our function right here!
-    rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+    video_frame_callback=video_frame_callback,
+    # This configuration helps traverse strict network firewalls
+    rtc_configuration={
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]},
+            {"urls": ["stun:stun1.l.google.com:19302"]}
+        ]
+    }
 )
