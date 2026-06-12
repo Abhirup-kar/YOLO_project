@@ -57,6 +57,40 @@ Snapshots are named with a timestamp so you can easily trace when a detection oc
 - Integrate with a lightweight web UI to browse snapshots.
 - Replace `best.pt` with a custom-trained model for your environment.
 
+## Telegram alerts
+
+This project can send Telegram messages when an intruder is detected. To enable it, set the required environment variables and restart the app.
+
+Required environment variables:
+
+- `TELEGRAM_BOT_TOKEN` — your bot token from BotFather
+- `TELEGRAM_CHAT_ID` — the chat ID (user or group) to receive alerts
+- `TELEGRAM_ENABLED` — set to `1`, `true`, or `yes` to enable alerts (optional flag depending on your configuration)
+
+Example (PowerShell):
+
+```powershell
+$env:TELEGRAM_BOT_TOKEN = "<your-bot-token>"
+$env:TELEGRAM_CHAT_ID = "<your-chat-id>"
+$env:TELEGRAM_ENABLED = "1"
+python app.py
+```
+
+Example (Linux / macOS):
+
+```bash
+export TELEGRAM_BOT_TOKEN="<your-bot-token>"
+export TELEGRAM_CHAT_ID="<your-chat-id>"
+export TELEGRAM_ENABLED=1
+python app.py
+```
+
+Notes:
+
+- Make sure `intruder_snapshots/` exists and the application has write permissions.
+- If your project uses a `.env` file, add the variables there and load them at runtime.
+- The exact variable names and enabling behavior depend on your local changes; adjust as needed to match the names used in your code.
+
 ## License & Contact
 
 This project is provided as-is for demonstration and personal use. If you'd like help customizing or deploying this, open an issue or message me.
