@@ -91,9 +91,6 @@ Notes:
 - If your project uses a `.env` file, add the variables there and load them at runtime.
 - The exact variable names and enabling behavior depend on your local changes; adjust as needed to match the names used in your code.
 
-## License & Contact
-
-This project is provided as-is for demonstration and personal use. If you'd like help customizing or deploying this, open an issue or message me.
 
 ---
 
