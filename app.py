@@ -10,8 +10,8 @@ st.write("This app runs entirely on your machine using your local webcam.")
 # ===================================================
 # CONFIGURATION & INITIALIZATION
 # ===================================================
-TELEGRAM_TOKEN = "8658774188:AAHnM_cVZHDMPZH_PCbiUA1BgROjuBHD1Qg"
-TELEGRAM_CHAT_ID = "7397575620"
+TELEGRAM_TOKEN = "YOUR_TELEGRAM_TOKEN"
+TELEGRAM_CHAT_ID = "YOUR_TELEGRAM_CHAT_ID"
 ALERT_COOLDOWN = 15  
 
 @st.cache_resource
